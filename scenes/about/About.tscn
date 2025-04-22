@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/button/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/picture/about-2-12-2025.png" type="Texture" id=2]
+[ext_resource path="res://assets/picture/profilepic.png" type="Texture" id=3]
+[ext_resource path="res://assets/picture/minecraft-bg-night.jpg" type="Texture" id=4]
+[ext_resource path="res://scenes/about/About.cs" type="Script" id=5]
+[ext_resource path="res://scenes/TextBox/TextBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/audio/C418-Minecraft-Minecraft-Volume-Alpha.mp3" type="AudioStream" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="TextBoxAbout" parent="." instance=ExtResource( 6 )]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -214.0
+margin_top = -124.0
+margin_right = 340.0
+margin_bottom = 188.0
+texture = ExtResource( 4 )
+
+[node name="C" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="V" type="VBoxContainer" parent="C"]
+margin_left = 171.0
+margin_top = 110.0
+margin_right = 1195.0
+margin_bottom = 657.0
+
+[node name="Logo" type="TextureRect" parent="C/V"]
+margin_right = 1024.0
+margin_bottom = 343.0
+texture = ExtResource( 2 )
+
+[node name="HSeparator" type="HSeparator" parent="C/V"]
+margin_top = 347.0
+margin_right = 1024.0
+margin_bottom = 547.0
+custom_constants/separation = 200
+custom_styles/separator = SubResource( 1 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 913.0
+margin_top = 48.0
+margin_right = 1321.0
+margin_bottom = 660.0
+texture = ExtResource( 3 )
+stretch_mode = 5
+
+[node name="BackButton2" parent="." instance=ExtResource( 1 )]
+margin_left = 62.0
+margin_top = 56.0
+margin_right = 416.0
+margin_bottom = 153.0
+button_text = "Back"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true

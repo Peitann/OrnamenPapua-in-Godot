@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/C418-Minecraft-Minecraft-Volume-Alpha.mp3-99740987e9aa67e4b2bfbce45f20c2b4.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/C418-Minecraft-Minecraft-Volume-Alpha.mp3"
+dest_files=[ "res://.import/C418-Minecraft-Minecraft-Volume-Alpha.mp3-99740987e9aa67e4b2bfbce45f20c2b4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

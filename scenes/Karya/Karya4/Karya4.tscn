@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/button/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Karya/Karya4/Karya4.cs" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="BackButton6" parent="." instance=ExtResource( 1 )]
+margin_left = 31.0
+margin_top = 608.0
+margin_right = 327.0
+margin_bottom = 687.0
+button_text = "Back"

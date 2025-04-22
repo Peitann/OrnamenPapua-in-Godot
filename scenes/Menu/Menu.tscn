@@ -1,0 +1,133 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/button/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Menu/Menu.cs" type="Script" id=2]
+[ext_resource path="res://assets/picture/go-craft-2-12-2025.png" type="Texture" id=3]
+[ext_resource path="res://assets/picture/minecraft-bg-night.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/audio/C418-Minecraft-Minecraft-Volume-Alpha.mp3" type="AudioStream" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = -141.0
+margin_right = 298.0
+margin_bottom = 171.0
+texture = ExtResource( 4 )
+
+[node name="C" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -557.0
+margin_right = 557.0
+
+[node name="V" type="VBoxContainer" parent="C"]
+margin_left = 45.0
+margin_top = 5.0
+margin_right = 1069.0
+margin_bottom = 714.0
+
+[node name="Logo" type="TextureRect" parent="C/V"]
+margin_right = 1024.0
+margin_bottom = 266.0
+texture = ExtResource( 3 )
+
+[node name="HSeparator" type="HSeparator" parent="C/V"]
+margin_top = 270.0
+margin_right = 1024.0
+margin_bottom = 270.0
+custom_constants/separation = 0
+custom_styles/separator = SubResource( 1 )
+
+[node name="ButtonGroup" type="HBoxContainer" parent="C/V"]
+margin_top = 274.0
+margin_right = 1024.0
+margin_bottom = 709.0
+
+[node name="Left" type="VBoxContainer" parent="C/V/ButtonGroup"]
+margin_right = 128.0
+margin_bottom = 435.0
+rect_min_size = Vector2( 128, 128 )
+rect_pivot_offset = Vector2( -1286, -108 )
+
+[node name="Center" type="VBoxContainer" parent="C/V/ButtonGroup"]
+margin_left = 132.0
+margin_right = 892.0
+margin_bottom = 435.0
+rect_min_size = Vector2( 128, 128 )
+rect_pivot_offset = Vector2( -1486, -339 )
+size_flags_horizontal = 3
+custom_constants/separation = 15
+
+[node name="Karya1" parent="C/V/ButtonGroup/Center" instance=ExtResource( 1 )]
+margin_top = 0.0
+margin_right = 760.0
+margin_bottom = 60.0
+button_text = "Karya 1"
+
+[node name="Karya2" parent="C/V/ButtonGroup/Center" instance=ExtResource( 1 )]
+margin_top = 75.0
+margin_right = 760.0
+margin_bottom = 135.0
+button_text = "Karya2"
+
+[node name="Karya3" parent="C/V/ButtonGroup/Center" instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_right = 760.0
+margin_bottom = 210.0
+button_text = "Coming Soon"
+
+[node name="Karya4" parent="C/V/ButtonGroup/Center" instance=ExtResource( 1 )]
+margin_top = 225.0
+margin_right = 760.0
+margin_bottom = 285.0
+button_text = "Guide"
+
+[node name="Guide" parent="C/V/ButtonGroup/Center" instance=ExtResource( 1 )]
+margin_top = 300.0
+margin_right = 760.0
+margin_bottom = 360.0
+button_text = "Guide"
+
+[node name="ButtonLine" type="HBoxContainer" parent="C/V/ButtonGroup/Center"]
+margin_top = 375.0
+margin_right = 760.0
+margin_bottom = 435.0
+size_flags_horizontal = 3
+custom_constants/separation = 16
+
+[node name="About" parent="C/V/ButtonGroup/Center/ButtonLine" instance=ExtResource( 1 )]
+margin_top = 0.0
+margin_right = 372.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+button_text = "About"
+
+[node name="Exit" parent="C/V/ButtonGroup/Center/ButtonLine" instance=ExtResource( 1 )]
+margin_left = 388.0
+margin_top = 0.0
+margin_right = 760.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+button_text = "Exit"
+
+[node name="Right" type="VBoxContainer" parent="C/V/ButtonGroup"]
+margin_left = 896.0
+margin_right = 1024.0
+margin_bottom = 435.0
+rect_min_size = Vector2( 128, 128 )
+rect_pivot_offset = Vector2( -1486, -339 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
